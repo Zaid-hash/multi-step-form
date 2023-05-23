@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body>
+  <!-- Step 1 -->
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 p-5">
+        <div class="imageText bg-white p-3">
+          <!-- Step 1 -->
+          <div class="col-md-12">
+            <div class="row">
+              <!-- <div class="col-md-4"></div>
+            <div class="col-md-8"></div> -->
+              <div id="stepOne" class="d-flex justify-content-start">
+                <div class="card sideBarImg col-md-4 pt-4">
+                  <div class="card-bodyOne mb-2">
+                    <h5 id="sideCircle1" class="sideBarNum card-title"
+                      onclick="func1(this.id)">1
+                    </h5>
+                    <div class="textBody ms-1">
+                      <p class="card-text p-0 mb-0 text-uppercase text-black fw-normal">Step 1</p>
+                      <p class="card-text  text-uppercase p-0 text-white fw-normal">Your Info</p>
+                    </div>
+                  </div>
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">2
+                    </h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 2</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Select Plan</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">3</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 3</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Add-ons</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">4</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 4</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Summary</p>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+                <!-- Personal Info -->
+                <div class="personalInfo px-4 position-relative col-md-8">
+                  <h1>Personal Info</h1>
+                  <p><small>Please provide your name, email address, and phone number.</small></p>
+                  <div>
+                    <h6 class="d-inline-block">Name</h6>
+                    <span id = "requireField" class="requireFieldClass float-end d-none mb-1"> <b> <small> This field is required </small></b></span>
+
+                    <div  class="input-group mb-3">
+                      
+                      <input  type="text" id="name" class=" form-control d-block" placeholder="Name" aria-label="Username"
+                        aria-describedby="basic-addon1" onchange="value1(this.id)">
+                    </div>
+                    <h6 class="d-inline-block">Email</h6>
+                    <span id = "requireField2" class="requireFieldClass float-end d-none mb-1"> <b> <small> This field is required </small></b></span>
+
+                    <div  class="input-group mb-3">
+                      <input  id="email" type="text" class="form-control" placeholder="Email" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2" onchange="value1(this.id)">
+
+                    </div>
+                    <h6 class="d-inline-block">Phone Number</h6>
+                    <span id = "requireField3" class="requireFieldClass float-end d-none mb-1"> <b> <small> This field is required </small></b></span>
+
+                    <div  class="input-group mb-3">
+                      <input id = "phoneNumber" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                        placeholder="e.g. +1 234 567 890" onchange="value1(this.id)">
+                    </div>
+
+
+                  </div>
+                  <div class="button position-absolute bottom-0 end-0 me-4">
+                    <button id="moveUp" class="btn btn-primary float-end" onclick="func1(this.id)">Next Step</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Step 2 -->
+              <div id="stepTwo" class="d-flex justify-content-start d-none">
+                <div class="card sideBarImg col-md-4 pt-4">
+                  <div class="card-bodyOne mb-2">
+                    <h5  class="sideBarNum card-title"
+                      onclick="func1(this.id)">1
+                    </h5>
+                    <div class="textBody ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 1</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Your Info</p>
+                    </div>
+                  </div>
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 id="sideCircle2" class="sideBarNum card-title">2
+                    </h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 2</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Select Plan</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">3</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 3</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Add-ons</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">4</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 4</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Summary</p>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+                <!-- Select your plan -->
+                <div class="selectPlan px-4 position-relative col-md-8">
+                  <h1>Select your plan</h1>
+                  <p><small>You have the option of monthly or yearly billing.</small></p>
+                  <div class="d-flex gap-2">
+
+                    <!-- Plan mode 1  -->
+                    <div id="arcade" class="card p-2" style="width:100% ; " onclick="func2(this.id)">
+                      <img class="card-img-top" src="./assets/images/icon-arcade.svg" alt="Card image cap">
+                      <div class="card-body  p-0">
+                        <p id="text" class="card-text" onclick="func2(this.id)"> <b> Arcade</b></p>
+                        <p class="card-text"> <span> $</span> <span id="value" onclick="func2(this.id)">9</span>
+                          <span>/mo</span></p>
+
+                      </div>
+                    </div>
+
+                    <!-- Plan mode 2  -->
+                    <div id="advanced" class="card p-2" style="width:100%;" onclick="func2(this.id)">
+                      <img class="card-img-top" src="./assets/images/icon-advanced.svg" alt="Card image cap">
+                      <div class="card-body p-0">
+                        <p id="text2" class="fw-bolder card-text mb-4" onclick="func2(this.id)">Advanced</p>
+                        <p class="card-text"><span> $</span> <span id="value2" onclick="func2(this.id)">12</span>
+                          <span>/mo</span></p>
+
+                      </div>
+                    </div>
+
+                    <!-- Plan mode 3  -->
+                    <div id="pro" class="card p-2" style="width: 100%;" onclick="func2(this.id)">
+                      <img class="card-img-top" src="./assets/images/icon-pro.svg" alt="Card image cap">
+                      <div class="card-body  p-0">
+                        <p id="text3" class="card-text" onclick="func2(this.id)"> <b> Pro</b></p>
+                        <p class="card-text"><span> $</span> <span id="value3" onclick="func2(this.id)">15</span>
+                          <span>/mo</span></p>
+
+                      </div>
+                    </div>
+                    <!-- Plan mode end -->
+
+
+
+                  </div>
+                  <!-- Plan selection -->
+
+                  <div class="d-flex justify-content-center mt-2">
+                    <p>Monthly</p> &nbsp;
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    </div>
+                    &nbsp;
+                    <p>Yearly</p>
+                  </div>
+                  <div class="button position-absolute bottom-0 end-0 me-4">
+                    <button id="moveUp2" class="btn btn-primary float-end" onclick="func1(this.id)">Next Step</button>
+                  </div>
+                  <div class="button position-absolute bottom-0 start-2">
+                    <button id="moveDown" class="btn btn-outline-secondary float-start" onclick="func1(this.id)">Go Back</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Step 3 -->
+              <div id="stepThree" class="d-flex justify-content-start d-none">
+                <div class="card sideBarImg col-md-4 pt-4">
+                  <div class="card-bodyOne mb-2">
+                    <h5  class="sideBarNum card-title"
+                      onclick="func1(this.id)">1
+                    </h5>
+                    <div class="textBody ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 1</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Your Info</p>
+                    </div>
+                  </div>
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">2
+                    </h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 2</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Select Plan</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 id="sideCircle3" class="sideBarNum card-title">3</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 3</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Add-ons</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">4</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 4</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Summary</p>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+
+                <!-- Pick add-ons -->
+                <div class="selectPlan px-4 position-relative col-md-8">
+                  <h1>Pick add-ons</h1>
+                  <p><small>Add-ons help enhance your gaming experience.</small></p>
+
+                  <!-- services selection 1  -->
+                  <div id="addOnsOne" class="addons w-100 form-check border border-1 rounded-2 mb-2 px-5">
+                    <input id="onlineService" class="mt-3 form-check-input" type="checkbox" value="" unchecked
+                      onclick="func3()">
+                    <h6 id="onlineText" onclick="func3()" class="mb-0">Online service</h6>
+                    <p class="float-end mt-0"> $ <span id="onlineValue" onclick="func3()">1</span> /mo</p>
+                    <p class="mt-1">Access to multiplayer games</p>
+                  </div>
+                  <!-- services selection 2  -->
+
+                  <div id="addOnsTwo" class="addons w-100 form-check border border-1 rounded-2 mb-2 px-5">
+                    <input id="largerStorage" class="mt-3 form-check-input" type="checkbox" value="" unchecked
+                      onclick="func3()">
+                    <h6 id="largerStorageText" onclick="func3()" class="mb-0">Larger Storage</h6>
+                    <p class="float-end mt-0">$ <span id="largerStorageValue" onclick="func3()">2</span> /mo</p>
+
+                    <p class="mt-1">Extra 1TB of cloud save</p>
+
+                  </div>
+
+                  <!-- services selection 3  -->
+
+                  <div id="addOnsThree" class="addons w-100 form-check border border-1 rounded-2 mb-2 px-5">
+                    <input id="customizableProfile" class="mt-3 form-check-input" type="checkbox" value="" unchecked
+                      onclick="func3()">
+                    <h6 onclick="func3()" id="customizableProfileText" class="mb-0">Customizable profile</h6>
+                    <p class="float-end mt-0">$ <span id="customizableProfileValue" onclick="func3()"> 2 </span>/mo</p>
+
+                    <p class="mt-1">Custom themes </p>
+
+                  </div>
+
+                  <div class="button position-absolute bottom-0 end-0 me-4">
+                    <button id="moveUp3" class="btn btn-primary float-end" onclick="func1(this.id)">Next Step</button>
+                  </div>
+                  <div class="button position-absolute bottom-0 start-2">
+                    <button id="moveDown2" class="btn btn-outline-secondary float-start" onclick="func1(this.id)">Go Back</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div id="stepFour" class="d-flex justify-content-start d-none">
+                <div class="card sideBarImg col-md-4 pt-4">
+                  <div class="card-bodyOne mb-2">
+                    <h5  class="sideBarNum card-title"
+                      onclick="func1(this.id)">1
+                    </h5>
+                    <div class="textBody ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 1</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Your Info</p>
+                    </div>
+                  </div>
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">2
+                    </h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 2</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Select Plan</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="sideBarNum card-title">3</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 3</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Add-ons</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 id="sideCircle4" class="sideBarNum card-title">4</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 4</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Summary</p>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+
+                <!-- Finishing up -->
+                <div  class="selectPlan px-4 position-relative col-md-8">
+                  <h1>Finishing Up</h1>
+                  <p><small>Double-check everything looks OK before consirming.</small></p>
+
+                  <!-- Billing section   -->
+                  <div class="w-100 form-check mb-2 p-2">
+                    <div class="billing">
+                      <!-- Arcade value -->
+                      <div class="d-flex justify-content-between mx-2">
+                        <p id="billPlan" class="mb-0" onclick="func2()"></p>
+                        <p id="arcadePayment" class="float-end mt-0" onclick="func2()"></p>
+
+                      </div>
+
+                      <!-- Advanced value -->
+                      <div class="d-flex justify-content-between mx-2">
+                        <p id="billPlan2" class="mb-0" onclick="func2()"></p>
+                        <p id="advancedPayment" class="float-end mt-0" onclick="func2()"></p>
+
+                      </div>
+
+                      <!-- Pro value -->
+                      <div class="d-flex justify-content-between mx-2">
+                        <p id="billPlan3" class="mb-0" onclick="func2()"></p>
+                        <p  id="proPayment" class="float-end mt-0" onclick="func2()"></p>
+
+                      </div>
+
+                      <p class="mt-1">Change</p>
+                      <hr class="w-100">
+                      <span id="onlineServiceText" class="fw-bold text-black" onclick="func3()"></span>
+                      <span id="onlineServicePrice" class="fw-semibold text-primary float-end mt-0"
+                        onclick="func3()"></span>
+                      <br>
+                      <span id="largerStorageTextBill" class="fw-bold text-black" onclick="func3()"></span>
+                      <span id="largerStoragePrice" class="fw-semibold text-primary float-end mt-0"
+                        onclick="func3()"></span>
+
+                      <br>
+
+                      <span id="customTextBill" class="fw-bold text-black" onclick="func3()"></span>
+                      <span id="customPrice" class="fw-semibold text-primary float-end mt-0" onclick="func3()"></span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p id="totalText" class="fw-bold text-black">Total (per month) </p>
+                      <p id="totalAmount" class="fw-bold text-primary float-end mt-0"></p>
+                    </div>
+                  </div>
+
+                  <div class="button position-absolute bottom-0 end-0 me-4">
+                    <button id="moveUp4" class="btn btn-primary float-end" onclick="func1(this.id)">Confirm</button>
+                  </div>
+                  <div class="button position-absolute bottom-0 start-2">
+                    <button id="moveDown3" class="btn btn-outline-secondary float-start" onclick="func1(this.id)">Go Back</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div id="stepFive" class="d-flex justify-content-start d-none">
+                <div class="card sideBarImg col-md-4 pt-4">
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5  class="card-title">1
+                    </h5>
+                    <div class="textBody ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 1</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Your Info</p>
+                    </div>
+                  </div>
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="card-title sideBarNum">2
+                    </h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 2</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Select Plan</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 class="card-title sideBarNum">3</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-black fw-normal">Step 3</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Add-ons</p>
+                    </div>
+                  </div>
+
+                  <div class="card-bodyOne p-0 mb-2">
+                    <h5 id="sideCircle5" class="sideBarNum card-title">4</h5>
+                    <div class="textBody  ms-1">
+                      <p class="card-text p-0 mb-0 text-secondary fw-normal">Step 4</p>
+                      <p class="card-text text-uppercase p-0 text-white fw-normal">Summary</p>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+
+                  <!-- Thank you -->
+                </div>
+                <div class="thanks w-50 mx-auto text-center my-auto col-md-8">
+                  <img src="./assets/images/icon-thank-you.svg" alt="">
+                  <h1>Thank you!</h1>
+                  <p>Thankyou for confirming your subscription! We hope that you have fun using our platform. If you
+                    ever
+                    need support, please feel free to email us at support@loremgaming.com</p>
+
+                </div>
+
+
+
+
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
