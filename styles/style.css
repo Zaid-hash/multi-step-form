@@ -70,4 +70,6 @@ h5 ,.textBody{
 .requireFieldClass{
     color : red;
 }
-
+.change{
+    cursor: pointer;
+}
