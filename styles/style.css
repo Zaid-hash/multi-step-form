@@ -1,75 +1,111 @@
-.container-fluid{
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.container-fluid {
     width: 100%;
     height: 100vh;
+    background-color: #eef5ff;
     overflow-x: hidden;
-background-color: #eef5ff;
+    display: flex;
+    align-items: center;
 }
 
-.sideBarImg{
-    background-image: url('../assets/images/bg-sidebar-desktop.svg');
+.sideBarImg {
+    background-image: url("../assets/images/bg-sidebar-desktop.svg");
     background-repeat: no-repeat;
-    /* width: max-content; */
-    width: 35%;
-   height: 79vh;
-    /* background-position: 100; */
-    border: none;
-
-}
-.imageText{
-    max-height: 100%;
-}
-.card-title{
-    width: 10%;
-    background-color:#eef5ff;
-}
-#sideCircle1{
-    background-color:#c0e0ff;
-}
-.card-bodyOne h5{
-    background-color: transparent;
-}
-h5 ,.textBody{
-    display: inline-block;
-    vertical-align: middle;
-}
-.pageOne{
-    max-width: 100%;
+    background-size: contain;
+    width: 200px;
+    height: 400px;
+    background-position-y: center;
 }
 
-/* Second page */
-.card-img-top{
-    width: 25%;
-    height: 25%;
-    margin: 10px;
+.card-bodyOne {
+    padding: 3% 0% 0% 5%;
 }
-.billing{
-    background-color:#eef5ff ;
-}
-.addons{
-    cursor: pointer;
-}
-.addons:active{
-    border-color: blue !important;
-}
-.addons:hover{
-    border-color: blue !important;
-}
-.card-bodyOne{
-   margin-left: 10% ;
-}
-.sideBarNum{
+
+.sideBarNum {
     font-size: small;
     font-weight: bolder;
     padding: 5px 10px;
-    width: 12%;
-    height: 60%;
+    width: 30px;
+    height: 30px;
     border: 1px solid white;
     border-radius: 50%;
-    color : white;
+    color: white;
 }
-.requireFieldClass{
-    color : red;
+
+h5,
+.textBody {
+    display: inline-block;
+    vertical-align: middle;
 }
-.change{
+
+@media only screen and (min-width: 768px) {
+    .sideBarImg1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sideBarImg {
+        display: none;
+    }
+
+    .sideBarImg1 {
+        background-image: url("../assets/images/bg-sidebar-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 790px;
+        height: 500px;
+        background-color: #eef5ff;
+        margin: 0%!important;
+    }
+    .container-fluid{
+        padding: 0%!important;
+        overflow-x: visible;
+
+    }
+    .rightSection{
+        max-width: 90%!important;
+        background-color: white;
+        margin-top: -200px!important;
+        border-radius: 10px;
+        padding:  2%!important;
+    }
+    .childRow{
+        padding: 0%!important;
+        margin: 0% !important;
+        border: none!important;
+    }
+    .circles {
+        z-index: 3;
+        border: 1px solid white!important;
+        border-radius: 50%!important;
+        display: flex!important;
+        color: white;
+        font-weight: bold;
+        width: 70px!important;
+        height: 70px!important;
+margin-top: 40px;
+        align-items: center!important;
+        justify-content: center!important;
+    }
+}
+.requireFieldClass {
+    color: red;
+}
+
+.change {
     cursor: pointer;
+}
+
+/* Second page */
+.card-img-top {
+    width: 35%;
+    height: 45%;
+    margin: 10px;
 }

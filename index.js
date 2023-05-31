@@ -1,5 +1,3 @@
-
-
 // Next step functionality and Performing Validation 
 function nextStepFunction(id) {
     //Passing Regex 
@@ -14,6 +12,8 @@ function nextStepFunction(id) {
         document.getElementById("stepTwo").classList.remove("d-none");
         document.getElementById("sideCircle1").style.backgroundColor = "transparent";
         document.getElementById("sideCircle2").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle5").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle6").style.backgroundColor = "#c0e0ff";
     }
 
     if (((!nameRegex.test(name)) && (id == "moveUp"))) {
@@ -35,37 +35,52 @@ function nextStepFunction(id) {
         document.getElementById("stepTwo").classList.add("d-none");
         document.getElementById("stepThree").classList.remove("d-none");
         document.getElementById("sideCircle2").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle5").style.backgroundColor = "transparent";
         document.getElementById("sideCircle3").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle6").style.backgroundColor = "#c0e0ff";
+
     }
     if (id == "moveUp3") {
         document.getElementById("stepThree").classList.add("d-none");
         document.getElementById("stepFour").classList.remove("d-none");
         document.getElementById("sideCircle3").style.backgroundColor = "transparent";
         document.getElementById("sideCircle4").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle6").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle7").style.backgroundColor = "#c0e0ff";
+
+
     }
     if (id == "moveUp4") {
         document.getElementById("stepFour").classList.add("d-none");
         document.getElementById("stepFive").classList.remove("d-none");
         document.getElementById("sideCircle3").style.backgroundColor = "transparent";
         document.getElementById("sideCircle4").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle7").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle8").style.backgroundColor = "#c0e0ff";
     }
     if (id == "moveDown") {
         document.getElementById("stepTwo").classList.add("d-none");
         document.getElementById("stepOne").classList.remove("d-none");
         document.getElementById("sideCircle1").style.backgroundColor = "#c0e0ff";
         document.getElementById("sideCircle2").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle5").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle6").style.backgroundColor = "transparent";
     }
     if (id == "moveDown2") {
         document.getElementById("stepThree").classList.add("d-none");
         document.getElementById("stepTwo").classList.remove("d-none");
         document.getElementById("sideCircle2").style.backgroundColor = "#c0e0ff";
         document.getElementById("sideCircle3").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle6").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle7").style.backgroundColor = "transparent";
     }
     if (id == "moveDown3") {
         document.getElementById("stepFour").classList.add("d-none");
         document.getElementById("stepThree").classList.remove("d-none");
         document.getElementById("sideCircle3").style.backgroundColor = "#c0e0ff";
         document.getElementById("sideCircle4").style.backgroundColor = "transparent";
+        document.getElementById("sideCircle7").style.backgroundColor = "#c0e0ff";
+        document.getElementById("sideCircle8").style.backgroundColor = "transparent";
     }
 }
 
@@ -87,6 +102,8 @@ function validationGreenFunction(id) {
 
 
 function changeFunction() {
+    document.getElementById("sideCircle2").style.backgroundColor ="#c0e0ff";
+    document.getElementById("sideCircle4").style.backgroundColor ="transparent";
     document.getElementById("stepOne").classList.add("d-none");
     document.getElementById("stepTwo").classList.remove("d-none");
     document.getElementById("stepThree").classList.add("d-none");
